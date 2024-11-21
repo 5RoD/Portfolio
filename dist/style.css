@@ -554,7 +554,42 @@ video {
   display: none;
 }
 
-.bg-yellow-300 {
+.m-16 {
+  margin: 4rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.text-wrap {
+  text-wrap: wrap;
+}
+
+.bg-black {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.font-poppins {
+  font-family: Poppins, poppins-semibold;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
