@@ -31,16 +31,6 @@
             top: 0;
             left: 0;
         }
-        .custom-gradient2 {
-            background: linear-gradient(45deg, #181C14, #3C3D37, #204722, #ECDFCC); /* Ensures the gradient moves smoothly */
-            background-size: 400% 400%; /* Ensures the gradient moves smoothly */
-            animation: smoothGradient 5s ease infinite; /* Optional, for smooth gradient movement */
-            height: 7vh; /* Full viewport height */
-            width: 100%;
-            position: fixed; /* Make sure the background stays fixed */
-            bottom: 0;
-            left: 0;
-        }
 
         .blurred-background {
             backdrop-filter: blur(5px); /* Initial blur */
@@ -115,19 +105,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to tailwind CSS file -->
+    <link rel="stylesheet" href="style2.css"> <!-- Link custom CSS file -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
 </head>
-<body>
+<body >
     
-    <div class="custom-gradient select-none">
-        <!-- Blurred background (make sure you have styling in your CSS for this class) -->
+    <div class="custom-gradient select-none ">
+        <!-- Blurred background -->
         <div class="blurred-background"></div>
         <header>
             <!-- Main Div with shadow effect -->
-            <div id="contact" draggable="false" class="bg-black  border-green-800 border-b-4 shadow-lg select-none">
+            <div id="contact" draggable="false" class="bg-black border-green-800 border-b-4 shadow-lg select-none">
                 
 
                 <a draggable="false" href="https://www.google.com" target="_blank" class="block">
@@ -149,38 +140,75 @@
         </header>
         
         <main>
-            <div class="flex justify-center translate-x-20 m-16 select-none ">
+            <div class="flex justify-center translate-x-20 m-16 select-none">
                 <div class="relative ">
                     <!-- Image with hover effect -->
                      
                     <img src="../images/h2.png" alt="welcome image" draggable="false" class="w-32 h-32 rounded-lg object-cover transition-transform duration-300 hover:scale-110 shadow-2xl skeleton ">
                     
                     <h1 class="font-poppins font-semibold uppercase -translate-x-20 translate-y-4 transition-opacity duration-300 hover:opacity-40">Hoi, Welkom bij mijn portfolio 👋</h1>
-
-
-                    <div class="">
-                        <div class="card bg-base-300 rounded-box grid h-20 w-50 flex-grow ">
-
-                        </div>
-  
-                      </div>
                     
-                    
+                
                 </div>
             </div>
         </main>
 
-        <footer class="footer justify-center text-base-content p-5 custom-gradient2">
-            <aside>
-              <p class="">Copyright © 2025 - All right reserved by 
-                <a href="5rod@gravemc.net">Mohamad</a>
-              </p>
-            </aside>
-          </footer>
+
+       
+<!--Footer default text color and background color-->
+<footer class="text-gray-400 bg-black">        
+    <!--Size of footer-->
+<div class="container mx-auto py-14 px-6">
+    <!--Grids for the whole footer-->
+<div class="grid md:grid-cols-12 grid-cols-1 gap-7">
+    <!--cols for the text under the logo-->
+    <div class="lg:col-span-4 col-span-12">
+
+        <!--Footer logo will change later-->
+        <a href="#">
+            <img 
+            class="h-12"
+            src="../images/h2.png"
+            alt=""></a>
+<!--Main Text under the logo of footer-->
+        <p class="mt-6 text-gray-300">
+            This is a website i made in my free time
+            its crazy i know but like you can be crazy too wtf this is to long    
+        </p>
+
+    </div>
+<!--Contact me Cols-->
+    <div class="lg:col-span-2 md:col-span-4 col-span-12">
+        <h5 class="tracking-wide font-semibold">Contact me</h5>
+        <ul class="list-none mt-6 space-y-2">
+            <li>
+                <!--Change this later-->
+                <a href="#"
+                class="hover:text-green-600 transition-all duration-500 ease-in-out">Gmail</a>
+            </li>
+            <li>
+                <!--Change this later-->
+                <a href="#"
+                class="hover:text-green-600 transition-all duration-500 ease-in-out">Discord</a>
+            </li>
+            <li>
+                <!--Change this later-->
+                <a href="#"
+                class="hover:text-green-600 transition-all duration-500 ease-in-out">Instagram</a>
+            </li>
+            
+
+        </ul>
 
     </div>
 
-    <script src="scripts.js"></script> <!-- Link to your JS file -->
+
+</div>
+</div>
+</footer>
+
+    </div>
+    <script src="scripts.js"></script>
     
 </body>
 </html>
