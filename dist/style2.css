@@ -2,3 +2,127 @@
     margin-top: auto;
 }
 
+.fade-in {
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 1s ease-in; /* Transition effect */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Fully visible */
+}
+
+
+
+        /* Define the gradient and animation */
+        @keyframes smoothBlur {
+            0% {
+                backdrop-filter: blur(5px);
+            }
+            30% {
+                backdrop-filter: blur(10px);
+            }
+            50% {
+                backdrop-filter: blur(15px);
+            }
+            70% {
+                backdrop-filter: blur(10px);
+            }
+            100% {
+                backdrop-filter: blur(5px);
+            }
+        }
+
+        .custom-gradient {
+            background: linear-gradient(45deg, #181C14, #3C3D37, #204722, #ECDFCC);
+            background-size: 400% 400%;
+            animation: smoothGradient 5s ease infinite;
+            min-height: 100vh; /* Change to min-height for scrollability */
+            width: 100%;
+            position: relative; /* Change to relative */
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        @keyframes typewriter {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .letter {
+            display: inline-block;
+            animation: typewriter 0.5s ease-out forwards;
+        }
+
+        .letter:nth-child(1) { animation-delay: 0.1s; }
+        .letter:nth-child(2) { animation-delay: 0.2s; }
+        .letter:nth-child(3) { animation-delay: 0.3s; }
+        .letter:nth-child(4) { animation-delay: 0.4s; }
+        .letter:nth-child(5) { animation-delay: 0.5s; }
+        .letter:nth-child(6) { animation-delay: 0.6s; }
+        .letter:nth-child(7) { animation-delay: 0.7s; }
+        .letter:nth-child(8) { animation-delay: 0.8s; }
+        .letter:nth-child(9) { animation-delay: 0.9s; }
+        .letter:nth-child(10) { animation-delay: 1s; }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 10px; /* Add padding for mobile */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Smaller font size for mobile */
+            }
+
+            .flex {
+                flex-direction: column; /* Stack elements vertically */
+            }
+
+            .m-16 {
+                margin: 10px; /* Reduce margin */
+            }
+
+            .w-32 {
+                width: 80%; /* Make image responsive */
+                height: auto; /* Maintain aspect ratio */
+            }
+
+            footer {
+                padding: 20px; /* Add padding for footer */
+            }
+
+            .text-gray-400 {
+                font-size: 0.9rem; /* Smaller font size for footer text */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2rem; /* Further reduce font size for very small screens */
+            }
+
+            .letter {
+                font-size: 0.8rem; /* Smaller letters for mobile */
+            }
+
+            .lg\:col-span-4, .lg\:col-span-2 {
+                width: 100%; /* Stack columns on small screens */
+                margin-bottom: 20px; /* Add space between stacked columns */
+            }
+
+            .bg-black {
+                padding: 10px; /* Adjust padding for mobile */
+            }
+        }

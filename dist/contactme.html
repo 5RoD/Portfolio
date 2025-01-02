@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta tags for charset and viewport settings -->
+    <!-- Meta tags for character set and viewport settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Title of the website -->
+    
+    <!-- Title of the page -->
     <title>My Portfolio</title>
 
-    <!-- Linking CSS files -->
+    <!-- External CSS files for styling -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
-
-    <!-- Google Fonts and preconnect to optimize font loading -->
+    
+    <!-- Preconnect to Google Fonts to improve page load performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts import for Poppins font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS and DaisyUI for additional UI styling -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.14.0/dist/full.css" rel="stylesheet">
 </head>
-
 <body class="flex flex-col min-h-screen font-poppins fade-in">
-    <!-- Main background and gradient section -->
+    <!-- Main content container -->
     <div class="custom-gradient select-none">
         <div class="blurred-background"></div>
 
-        <!-- Header section with the contact link -->
+        <!-- Header section with welcome message -->
         <header>
             <div id="contact" draggable="false" class="bg-black border-green-800 border-b-4 shadow-lg select-none">
                 <a draggable="false" href="https://www.google.com" target="_blank" class="block">
@@ -47,50 +44,39 @@
             </div>
         </header>
 
-        <!-- Main content area -->
-        <main class="mb-auto">
-            <!-- Welcome section with image and greeting -->
-            <div class="flex justify-center m-16 select-none">
-                <div class="relative">
-                    <img src="../images/h2.png" alt="welcome image" draggable="false" class="w-32 h-32 rounded-lg object-cover translate-x-16 duration-300 hover:scale-110 shadow-2xl skeleton">
-                    <h1 class="font-semibold uppercase translate-y-4 transition-opacity duration-300 hover:opacity-40 -translate-x-3">Hoi, Welkom bij mijn portfolio 👋</h1>
-                </div>
-            </div>
-
-            <!-- Two section layout for 'I'm learning' and 'About Me' -->
-            <div class="flex justify-center m-16 space-x-8">
-                <!-- 'I'm learning' section -->
-                <div class="bg-black p-8 rounded-lg shadow-lg">
-                    <h2 class="text-xl text-green-800 font-semibold mb-4">I'm learning:</h2>
-                    <ul class="list-disc list-inside text-gray-300">
-                        <li>JavaScript</li>
-                        <li>Java</li>
-                        <li>Server Management</li>
-                        <li>MySQL</li>
-                        <li>Redis</li>
-                        <li>MongoDB</li>
-                        <li>HTML & CSS</li>
-                        <li>PHP</li>
-                        <li>Tailwind CSS</li>
-                        <li>DaisyUI</li>
-                    </ul>
-                </div>
-
-                <!-- 'About Me' section -->
-                <div class="bg-black p-8 rounded-lg shadow-lg">
-                    <h2 class="text-xl text-green-800 font-semibold mb-4">About Me:</h2>
-                    <p class="text-gray-300">I'm 21 years old, from Syria,</p>
-                    <p>currently living in the Netherlands.</p>
-                    <p>I study at Zuid and go by Mo.</p>
-                </div>
+        <!-- Main section with the contact form -->
+        <main class="flex items-center justify-center sticky top-[10vh]">
+            <div class="bg-black p-8 rounded-lg w-full max-w-md shadow-xl shadow-black">
+                <!-- Contact form -->
+                <form id="contactForm">
+                    <!-- Name input field -->
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Name</label>
+                        <input type="text" id="name" class="input input-bordered w-full" required>
+                    </div>
+                    <!-- Email input field -->
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" class="input input-bordered w-full" required>
+                    </div>
+                    <!-- Message textarea -->
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" class="textarea textarea-bordered w-full" rows="4" required></textarea>
+                    </div>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn border-t-green-950 btn-accent w-full">Send</button>
+                </form>
+                <!-- Response message after form submission -->
+                <p id="responseMessage" class="mt-4 text-green-600 hidden text-center"></p>
             </div>
         </main>
 
         <!-- Footer section with contact information -->
-        <footer class="text-gray-400 bg-black">
-            <div class="container mx-auto py-14 px-6 ">
+        <footer class="text-gray-400 bg-black sticky top-[100vh]">
+            <div class="container mx-auto py-14 px-6">
                 <div class="grid md:grid-cols-12 grid-cols-1 gap-7">
-                    <!-- Footer logo and website info -->
+                    <!-- Logo and description -->
                     <div class="lg:col-span-4 col-span-12">
                         <a href="#">
                             <img class="h-12 rounded-lg object-cover" src="../images/h2.png" alt="Footer Logo">
@@ -99,8 +85,7 @@
                             This website is for a school project, made in my free time. Don't expect it to be perfect; any bugs should be reported on the issues page on my <a class="text-blue-600" href="https://github.com/5RoD/Portfolio?tab=readme-ov-file">GitHub</a>.
                         </p>
                     </div>
-
-                    <!-- Contact information links -->
+                    <!-- Contact links -->
                     <div class="lg:col-span-2 md:col-span-4 col-span-12">
                         <h5 class="tracking-wide font-semibold">Contact me</h5>
                         <ul class="list-none mt-11 space-y-2">
@@ -120,8 +105,26 @@
         </footer>
     </div>
 
-    <!-- custom JavaScript file -->
-    <script src="scripts.js"></script>
-</body>
+    <!-- Script to handle form submission -->
+    <script>
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            document.getElementById('responseMessage').innerText = "I will contact you back as soon as possible."; // Set response message
+            document.getElementById('responseMessage').classList.remove('hidden'); // Show response message
+            this.reset(); // Reset the form fields after submission
+        });
 
+
+    <!-- Animation -->
+    document.addEventListener("DOMContentLoaded", function() {
+    // Wait for the page to fully load
+    const body = document.querySelector('body');
+    
+    // Add the 'visible' class to trigger the fade-in effect
+    setTimeout(() => {
+        body.classList.add('visible');
+    }, 100); // Delay to ensure the transition is noticeable
+});
+    </script>
+</body>
 </html>
