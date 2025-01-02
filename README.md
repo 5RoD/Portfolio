@@ -20,22 +20,26 @@ This is my personal portfolio website, showcasing my skills, projects, and conta
 To download and run this project locally, follow these steps:
 
 1. **Clone the Repository**  
-   Open your terminal and run the following command:
+   Open the project in visual studio:
    ```bash
    git clone https://github.com/5rod/Portfolio.git
    ```
 
-2. **Navigate to the Project Folder**  
-   After cloning, navigate to the project folder:
+2. **Navigate to the Project Main file**  
+   After cloning, navigate to the project file:
    ```bash
-   cd Portfolio
+   index.html
    ```
+   
+3. **Tailwind**
+   In the Visual Studio console run:
+```bash
+   npm run dev
+```
 
-3. **Open the Project in Your Browser**  
-   Open the `index.html` file in your browser to view the website locally.
+4. **Live preview**
+   You can now use live preview or any other extension to open the website
 
-## Navigation
-The website is structured to be user-friendly with intuitive navigation.
 
 1. **Home Page**  
    The homepage provides a brief introduction to the portfolio, including a summary of my skills and background.
